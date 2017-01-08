@@ -1,4 +1,17 @@
 {% extends "layout.html" %}
 {% block body %}
-
+    <div class=module-iframe>
+        <h5>BIS Application Site Status</h5>
+            {% for site in site_status %}
+                <div class=component> 
+                    <div>{{ site['name'] }}</div>
+                {% if site['status'] != "Operational"%}
+                    <div class="error">{{ site['status'] }}</div>
+                {% else %}
+                    <div class="ok">{{ site['status'] }}</div> 
+                {% endif %}
+                </div>
+            {% endfor %}           
+            
+    </div>
 {% endblock %}
