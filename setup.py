@@ -6,5 +6,6 @@ setup(
 	include_package_Data=True,
 	install_requires=[
 		'flask',
+		'requests'
 	],
 )
