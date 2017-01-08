@@ -1,0 +1,53 @@
+body { 
+    font-family: sans-serif;  
+    font-size: smaller;
+}
+
+h1, h2, h3, h4, h5 { color: dimgray; }
+
+h1, h2 { margin: 0; }
+
+h1 { border-bottom: 5px solid #eee;}
+
+h2 { border-bottom: 3px solid #eee;}
+
+h3 { border-bottom: 3px solid #eee;}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+
+li:before {
+    content: "• ";
+    color: dimgray; /* or whatever color you prefer */
+}
+
+.page                           { margin: 2em auto; width: auto; }
+.metanav                        { text-align: right: font-size: 0.8em; }
+.module                         { }
+.error {
+    color:red; font-weight:bold;
+}
+.ok {
+    color:green; font-weight:bold;
+}
+.component {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: .4vw;
+    margin-bottom: -1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.module-iframe {
+    font-size: .8em;
+    width: 50%;
+}
