@@ -1,7 +1,0 @@
-sitestatus/__init__.py
-sitestatus/views.py
-sitestatus.egg-info/PKG-INFO
-sitestatus.egg-info/SOURCES.txt
-sitestatus.egg-info/dependency_links.txt
-sitestatus.egg-info/requires.txt
-sitestatus.egg-info/top_level.txt
