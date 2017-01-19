@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- http://stackoverflow.com/questions/15229732/show-a-div-onclick-and-hide-the-image-that-triggered-it -->
+    <div id="yolo" class=component > 
+        Yolo!        
+    </div>
+    
+    <div id="magic" style="display:none;" class=component>
+        Magic! 
+    </div>
+    
+    <script type="text/javascript">
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener    
+    
+        function swap(show, hide){
+            document.getElementById(show).style.display = 'block';
+            document.getElementById(hide).style.display = 'none';
+        }
+        
+        // add event listener
+        document.getElementById("yolo").addEventListener("click", function(){swap("magic", "yolo")}, false);
+        document.getElementById("magic").addEventListener("click", function(){swap("yolo", "magic")}, false);
+
+        //function eventAdd(show, hide){
+        //    var el = document.getElementById(hide);
+        //    el.addEventListener("click", function(){swap(show, hide)}, false);
+        // }
+
+        // eventAdd("magic", "yolo");
+        // eventAdd("yolo", "magic");
+
+    </script>
+{% endblock %}
