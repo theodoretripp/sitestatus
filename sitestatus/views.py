@@ -28,3 +28,6 @@ def get_sites_status(sites):
 def index():
     return render_template('index.html', site_status=get_sites_status(SITES_LIST))
 
+@app.route('/jsdemo')
+def jsdemo():
+    return render_template('jsdemo.html')
