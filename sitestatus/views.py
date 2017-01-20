@@ -13,8 +13,8 @@ def get_sites_status(sites):
         try:
             r = requests.head(site['url'])
             site['status_code'] = r.status_code
-            print(r.status_code)
             if r.status_code in (200, 302, 303, 401):
+            # print(r.status_code)
                 site['status'] = 'Operational'
             else:
                 site['status'] = r.reason       

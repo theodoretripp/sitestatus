@@ -1,17 +1,43 @@
 {% extends "layout.html" %}
 {% block body %}
-    <div class=module-iframe>
+    <div class="module-iframe">
         <h5>BIS Application Site Status</h5>
             {% for site in site_status %}
-                <div class=component> 
+                <div id="comp{{loop.index}}" class="component"> 
                     <div>{{ site['name'] }}</div>
                 {% if site['status'] != "Operational"%}
                     <div class="error">{{ site['status'] }}</div>
                 {% else %}
                     <div class="ok">{{ site['status'] }}</div> 
-                {% endif %}
+                </div>     
+                <div id="info{{loop.index}}" class="info">
+                    <div>{{ site['url'] }}</div> 
+                    <div>{{ site['status_code'] }}</div>
                 </div>
+                {% endif %}
             {% endfor %}           
+
             
     </div>
+
+    <script type="text/javascript">
+
+    function showInfo(show){
+        console.log(show);
+        show.style.display = 'flex';
+    }
+
+    
+    var comps = document.getElementsByClassName("component");
+    var infos = document.getElementsByClassName("info");
+    for (var i = 0; i <= comps.length - 1; i++)
+    {
+      el = infos[i]
+      console.log(el)
+      console.log(comps[i])
+      comps[i].addEventListener("click", function(){showInfo(el)}, false);
+    }
+
+
+    </script>
 {% endblock %}

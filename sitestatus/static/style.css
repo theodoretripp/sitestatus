@@ -47,6 +47,16 @@ li:before {
     justify-content: space-between;
 }
 
+.info {
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: .4vw;
+    margin-bottom: -1px;
+    justify-content: space-between;
+    color: dimgray;
+    display: none;
+}
+
 .module-iframe {
     font-size: .8em;
     width: 50%;
